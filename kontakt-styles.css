@@ -4,12 +4,27 @@ body {
     padding: 0;
 }
 
+.header-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f7f5f5; /* Farven på baggrunden rundt om headeren */
+    padding: 20px; /* Juster padding som nødvendigt */
+}
+
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px 20px; /* juster padding for at ændre headeren størrelse */
     text-align: center;
+    border-radius: 15px; /* border-radius for runde hjørner */
+    font-size: 18px; /* Valgfrit juster skriftstørrelse */
+    height: fit-content; /* Sæt højden tilpasset til indholdet */
+    width: fit-content;
+    margin: 0 auto;
 }
+
+
+
 
 nav {
     display: inline-block;

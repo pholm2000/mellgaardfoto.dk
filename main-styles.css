@@ -4,12 +4,25 @@ body {
     padding: 0;
 }
 
+.header-container {
+    display: flex;
+    justify-content: center;
+    background-color: #f7f5f5; /* Farve på baggrunden rundt om headeren */
+    padding: 20px; /* Juster padding som nødvendigt */
+}
+
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 10px 20px; /* Juster padding for at styrre størrelsen på header */
     text-align: center;
+    border-radius: 15px; /* border-radius for runde hjørner */
+    font-size: 18px; /* Juster valgfrit skriftstørrelse */
+    height: fit-content; /* Sæt højden til at passe indholdet */
+    width: fit-content;
+    margin: 0 auto;
 }
+
 
 nav {
     display: inline-block;
@@ -29,17 +42,19 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    padding: 20px; /* Padding rundt om hele galleriet*/
+}
+
+.gallery a {
+    margin: 10px; /* Juster margin for at lave plads mellem billederne*/
 }
 
 /* Eksisterende CSS */
 .gallery img {
-    max-width: 300px; /* Juster selv til hvad du synes er pænt */
-    max-height: 200px; /* Juster selv til hvad du synes er pænt */
-    width: auto;
-    height: auto;
-    object-fit: cover;
-    border: 2px solid #333;
+    width: 300px;
+    height: auto; 
+    border: 2px solid #333; /* Tilføj border/outline rundt om billederne */
+    padding: 0; /* Fjern alt padding */
     transition: transform 0.3s ease-in-out;
 }
 
@@ -74,4 +89,138 @@ nav a:hover {
     max-width: 80%;
     max-height: 80%;
     margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/* Style til slider function */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Juster maximum bredde */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+/* Style til slider function^^^^ */
+
+
+
+
+
+/* Style frem og tilbage knapperne */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+#about {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+#about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Style links i "About" sektionen */
+#about a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#about a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
 }

@@ -7,15 +7,17 @@
     <link rel="stylesheet" href="main-styles.css">
 </head>
 <body>
-    <header>
-        <h1>MellgaardFoto</h1>
-        <nav>
-            <a href="main.html">Hjem</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Om os</a>
-            <a href="kontakt.html">Kontakt</a>
-        </nav>
-    </header>
+    <div class="header-container">
+        <header>
+            <h1>MellgaardFoto</h1>
+            <nav>
+                <a href="main.html">Hjem</a>
+                <a href="#">Portfolio</a>
+                <a href="faq.html">FAQ</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </header>
+    </div>
     <main>
         <div class="gallery">
             <a href="pictures/Freon1.jpg" class="lightbox"><img src="pictures/Freon1.jpg" alt="Sample Photo 1"></a>
@@ -23,11 +25,30 @@
             <a href="pictures/Freon3.jpg" class="lightbox"><img src="pictures/Freon3.jpg" alt="Sample Photo 3"></a>
             <!-- Tilføj flere billeder her -->
         </div>
-        <div id="lightbox-modal">
+        
+        <div id="lightbox-modal" class="lightbox-modal">
             <span class="close">&times;</span>
             <img class="modal-content" id="modal-img">
+            <!-- Frem og tilbage knapper -->
+            <a class="prev" href="#" onclick="plusSlides(-1, true)">&#10094;</a>
+            <a class="next" href="#" onclick="plusSlides(1, true)">&#10095;</a>                                
         </div>
+        
+        <section id="about">
+            <div class="container">
+                <h2>Om MellgaardFoto</h2>
+                <p>Velkommen til MellgaardFoto, hvor vi fanger skønheden i livet gennem kameraets linse. Grundlagt af [Dit Navn], brænder vi for at skabe tidløse minder og fortælle historier gennem fotografering.</p>
+                <p>Med [X] års erfaring i branchen specialiserer vi os i [nævn dine specialer, f.eks. portrætfotografering, eventdækning, osv.]. Vores mission er at levere fantastiske billeder, som vores kunder vil værdsætte hele livet.</p>
+                <p>Hos MellgaardFoto tror vi på fotografiets kraft til at vække følelser, bevare dyrebare øjeblikke og fejre livets milepæle. Uanset om det er at fange glæden ved et bryllup, uskylden hos en nyfødt eller spændingen ved en særlig begivenhed, er vi dedikerede til at overgå dine forventninger og levere enestående resultater.</p>
+                <p>Kontakt os i dag for at drøfte dine fotograferingsbehov og lad os hjælpe dig med at skabe varige minder.</p>                
+            </div>
+        </section>
+        
+        
+        
     </main>
+
+    
     <script src="script.js"></script>
 </body>
 </html>

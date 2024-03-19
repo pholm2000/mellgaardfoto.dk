@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MellgaardFoto.dk</title>
+    <link rel="stylesheet" href="main-styles.css">
+</head>
+<body>
+    <header>
+        <h1>MellgaardFoto</h1>
+        <nav>
+            <a href="main.html">Hjem</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Om os</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </header>
+    <main>
+        <div class="slider">
+            <div class="slide">
+              <img src="pictures/Freon1.jpg" alt="Photo 1">
+            </div>
+            <div class="slide">
+              <img src="pictures/Freon2.jpg" alt="Photo 2">
+            </div>
+            <div class="slide">
+              <img src="pictures/Freon3.jpg" alt="Photo 3">
+            </div>
+            <!-- Tilføj så mange slides som nødvendigt -->
+          </div>
+          
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".slide:first").addClass("active").fadeIn(500); // Vis det første slide når siden loader
+  
+  // Automatisk skift til næste slide hvert 5. sekundt
+  setInterval(function(){
+    var currentSlide = $(".active");
+    var nextSlide = currentSlide.next();
+    
+    if (nextSlide.length === 0) {
+      nextSlide = $(".slide:first");
+    }
+    
+    currentSlide.fadeOut(500).removeClass("active");
+    nextSlide.fadeIn(500).addClass("active");
+  }, 5000); // Skift slide hvert 5. sekundt
+});
+</script>
+
+    <script src="script.js"></script>
+</body>
+</html>
