@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MellgaardFoto.dk</title>
+    <link rel="stylesheet" href="main-styles.css">
+</head>
+<body>
+    <header>
+        <h1>MellgaardFoto</h1>
+        <nav>
+            <a href="main.html">Hjem</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Om os</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </header>
+    <main>
+        <div class="gallery">
+            <a href="pictures/Freon1.jpg" class="lightbox"><img src="pictures/Freon1.jpg" alt="Sample Photo 1"></a>
+            <a href="pictures/Freon2.jpg" class="lightbox"><img src="pictures/Freon2.jpg" alt="Sample Photo 2"></a>
+            <a href="pictures/Freon3.jpg" class="lightbox"><img src="pictures/Freon3.jpg" alt="Sample Photo 3"></a>
+            <!-- Tilføj flere billeder her -->
+        </div>
+        <div id="lightbox-modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modal-img">
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
