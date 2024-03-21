@@ -83,3 +83,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Resten af funktionerne...
+
+const testimonialsContainer = document.querySelector('.testimonials-container');
+let translateY = 0;
+
+function slideUp() {
+    translateY -= 220; // Adjust the slide distance as needed
+    testimonialsContainer.style.transform = `translateY(${translateY}px)`;
+}
+
+function slideDown() {
+    translateY += 220; // Adjust the slide distance as needed
+    testimonialsContainer.style.transform = `translateY(${translateY}px)`;
+}

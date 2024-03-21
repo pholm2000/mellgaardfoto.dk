@@ -6,6 +6,7 @@ body {
 }
 
 .container {
+    position: relative;
     max-width: 600px;
     margin: 100px auto;
     padding: 20px;
@@ -13,6 +14,11 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.1);
 }
 
 h1 {
@@ -30,4 +36,35 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.thank-you {
+    text-align: center;
+    margin-top: 100px; /* Adjust margin-top as needed */
+    position: relative; /* Make the container position relative */
+}
+
+.content {
+    padding: 20px; /* Add padding to the content */
+    border: 1px solid #ccc; /* Add border to the content */
+    border-radius: 10px; /* Add border radius to the content */
+}
+
+button {
+    position: absolute;
+    top: calc(30% - 40px); /* Adjust top position to position it at the bottom */
+    left: 8.2%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Center the button horizontally */
+    z-index: 1;
+    background-color: #afafaf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition */
+}
+
+button:hover {
+    background-color: #a09f9f;
 }

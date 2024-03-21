@@ -224,3 +224,76 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #555;
 }
+
+.testimonials {
+    text-align: center;
+    margin-top: 50px; /* Add space between header and testimonials */
+    background-color: #f2f2f2; /* Add the same background color as the about section */
+    padding: 20px; /* Add padding to create space around testimonials */
+}
+
+.testimonial {
+    display: inline-block;
+    margin: 10px 10px; 
+    max-width: 300px; 
+    vertical-align: top; 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 5px; 
+    border: 1px solid #ddd; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Add transition */
+}
+
+.testimonial p {
+    font-style: italic;
+}
+
+.testimonial p:last-child {
+    font-weight: bold;
+}
+
+.testimonial:hover {
+    background-color: #f9f9f9; 
+    transform: translateY(-5px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Align items to the edges */
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column; /* Change flex direction to column */
+    justify-content: flex-start; /* Align items to the start */
+}
+
+
+.right-section {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    margin-top: 15px;
+}
+
+.footer-item {
+    margin: 0 10px;
+    margin-bottom: 10px; /* Add space below each footer item */
+}
+
+.footer-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
