@@ -27,16 +27,16 @@
             <div class="slide">
               <img src="pictures/Freon3.jpg" alt="Photo 3">
             </div>
-            <!-- Tilføj så mange slides som nødvendigt -->
+
           </div>
           
     </main>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function(){
-  $(".slide:first").addClass("active").fadeIn(500); // Vis det første slide når siden loader
+  $(".slide:first").addClass("active").fadeIn(500);
   
-  // Automatisk skift til næste slide hvert 5. sekundt
+
   setInterval(function(){
     var currentSlide = $(".active");
     var nextSlide = currentSlide.next();
@@ -47,7 +47,7 @@ $(document).ready(function(){
     
     currentSlide.fadeOut(500).removeClass("active");
     nextSlide.fadeIn(500).addClass("active");
-  }, 5000); // Skift slide hvert 5. sekundt
+  }, 5000); 
 });
 </script>
 

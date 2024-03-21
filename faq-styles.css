@@ -2,25 +2,24 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f7f7f7; /* Soft background color */
 }
 
 .header-container {
     display: flex;
     justify-content: center;
-    background-color: #f7f5f5; /* Baggrundsfarven rundt om headeren */
-    padding: 20px; /* Juster padding som nødvendigt */
+    align-items: center;
+    background-color: #333; /* Dark header background */
+    padding: 20px;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px; /* Juster padding for at ændre størrelsen på headeren */
+    color: #fff; /* White text color */
+    padding: 10px 20px;
     text-align: center;
-    border-radius: 15px; /* Runde hjørner */
-    font-size: 18px; /* Valgfrit juster skriftstørrelsen */
-    height: fit-content; /* Tilpas højden til indholdet */
-    width: fit-content;
-    margin: 0 auto;
+    border-radius: 15px;
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold text */
 }
 
 nav {
@@ -30,7 +29,8 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px; /* Increased spacing between nav links */
+    font-size: 18px; /* Font size adjustment */
 }
 
 nav a:hover {
@@ -41,53 +41,114 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-direction: row; /* Sæt flex direction til row */
-    flex-wrap: wrap; /* Tillad item at wrap til næste linje */
+    flex-wrap: wrap;
 }
 
 .faq-section {
     max-width: 800px;
     padding: 20px;
-    margin: 10px; /* Tilføj margin for at lave plads mellem sektioner */
-    flex: 1; /* Tillad sektioner at blive større og mindre for at passe ind */
-    flex-basis: 0; /* Tillad sektioner at blive større og mindre ligeligt */
+    margin: 20px; /* Increased margin */
+    flex: 1;
+    flex-basis: 0;
+    background-color: #fff; /* White background */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 h2 {
-    text-align: center; /* Center-align headeren */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* tilføj skyggen */
-    max-width: fit-content;
-    margin: 0 auto;
-    padding: 10px; /* Tilføj padding for at lave plads til skyggen */
-    border-radius: 10px; /* Runde hjørner */
-    background-color: #fff; /* Tilføj baggrundsfarve */
-    margin-bottom: 20px;
+    text-align: center;
+    background-color: #333; /* Dark header background */
+    color: #fff; /* White text color */
+    padding: 15px 30px; /* Increased padding */
+    border-radius: 10px;
+    margin-bottom: 30px; /* Increased margin */
 }
 
-
 .faq-item {
-    border: 2px solid #ccc; /* Tilføj border rundt om hvert FAQ item */
-    padding: 10px; /* Tilføj padding for at lave plads mellem tekst og border */
-    margin-bottom: 10px; /* Tilføj margin mellem FAQ items */
-    display: flex; /* Brug flexbox */
-    flex-direction: column; /* Stabl spørgsmål og svar vertikalt */
-    border-radius: 20px; /* Runde hjørner */
-    transition: all 0.3s ease; /* Tilføj transition for alle properties */
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
 .faq-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tilføj skygger når musen er ovre */
+    transform: translateY(-5px); /* Lift up on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow on hover */
 }
 
 .question {
-    cursor: pointer; /* Skift markør til pointer */
+    cursor: pointer;
+    font-weight: bold; /* Bold question text */
 }
 
 .answer {
-    display: none; /* Skjul svarene normalt */
+    display: none;
 }
 
 .show {
-    display: block; /* Hvis svaret når 'show' classen er brugt */
+    display: block;
     text-align: center;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+.left-section, .right-section {
+    flex: 1;
+    text-align: center;
+}
+
+.left-section h3, .right-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-item {
+    margin-bottom: 10px;
+}
+
+.footer-item a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-item a:hover {
+    text-decoration: underline;
+}
+
+.fa {
+    margin-right: 5px;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floating-text {
+    animation: floating 2s infinite;
 }

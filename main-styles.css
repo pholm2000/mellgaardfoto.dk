@@ -2,27 +2,25 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f7f7f7; 
 }
 
 .header-container {
     display: flex;
     justify-content: center;
-    background-color: #f7f5f5; /* Farve på baggrunden rundt om headeren */
-    padding: 20px; /* Juster padding som nødvendigt */
+    align-items: center;
+    background-color: #333; 
+    padding: 20px;
 }
 
 header {
-    background-color: #333;
     color: #fff;
-    padding: 10px 20px; /* Juster padding for at styrre størrelsen på header */
+    padding: 10px 20px;
     text-align: center;
-    border-radius: 15px; /* border-radius for runde hjørner */
-    font-size: 18px; /* Juster valgfrit skriftstørrelse */
-    height: fit-content; /* Sæt højden til at passe indholdet */
-    width: fit-content;
-    margin: 0 auto;
+    border-radius: 15px;
+    font-size: 24px; 
+    font-weight: bold; 
 }
-
 
 nav {
     display: inline-block;
@@ -31,30 +29,37 @@ nav {
 nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 10px;
+    margin: 0 15px;
+    font-size: 18px; 
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px; /* Padding rundt om hele galleriet*/
+    padding: 20px; 
 }
 
 .gallery a {
-    margin: 10px; /* Juster margin for at lave plads mellem billederne*/
+    margin: 10px; 
 }
 
-/* Eksisterende CSS */
 .gallery img {
     width: 300px;
     height: auto; 
-    border: 2px solid #333; /* Tilføj border/outline rundt om billederne */
-    padding: 0; /* Fjern alt padding */
+    border: 2px solid #333; 
+    padding: 0; 
     transition: transform 0.3s ease-in-out;
 }
 
@@ -62,7 +67,6 @@ nav a:hover {
     transform: scale(1.1);
 }
 
-/* Lightbox styles */
 #lightbox-modal {
     display: none;
     position: fixed;
@@ -95,14 +99,10 @@ nav a:hover {
     transform: translate(-50%, -50%);
 }
 
-
-
-
-/* Style til slider function */
 .slider {
     position: relative;
     width: 100%;
-    max-width: 800px; /* Juster maximum bredde */
+    max-width: 800px; 
     margin: 0 auto;
     overflow: hidden;
   }
@@ -115,13 +115,7 @@ nav a:hover {
     width: 100%;
     height: auto;
   }
-/* Style til slider function^^^^ */
 
-
-
-
-
-/* Style frem og tilbage knapperne */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -175,7 +169,7 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
-/* Style links i "About" sektionen */
+
 #about a {
     color: #007bff;
     text-decoration: none;
@@ -190,22 +184,26 @@ nav a:hover {
 
 form {
     margin-top: 20px;
+    max-width: 600px; 
+    margin: 20px auto; 
 }
 
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px; 
+    font-weight: bold; 
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px; 
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 textarea {
@@ -216,20 +214,22 @@ button[type="submit"] {
     background-color: #333;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 15px 30px; 
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 10px; 
+    font-size: 18px; 
 }
 
 button[type="submit"]:hover {
     background-color: #555;
 }
 
+
 .testimonials {
     text-align: center;
-    margin-top: 50px; /* Add space between header and testimonials */
-    background-color: #f2f2f2; /* Add the same background color as the about section */
-    padding: 20px; /* Add padding to create space around testimonials */
+    margin-top: 50px; 
+    background-color: #f2f2f2; 
+    padding: 20px; 
 }
 
 .testimonial {
@@ -242,7 +242,7 @@ button[type="submit"]:hover {
     border-radius: 5px; 
     border: 1px solid #ddd; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Add transition */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
 }
 
 .testimonial p {
@@ -262,31 +262,34 @@ button[type="submit"]:hover {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between; /* Align items to the edges */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.left-section {
-    display: flex;
-    flex-direction: column; /* Change flex direction to column */
-    justify-content: flex-start; /* Align items to the start */
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    flex: 1;
 }
 
+.left-section, .right-section {
+    flex: 1;
+    text-align: center;
+}
 
-.right-section {
-    display: flex;
-    justify-content: flex-end; /* Align items to the right */
-    margin-top: 15px;
+.left-section h3, .right-section h3 {
+    margin-bottom: 10px;
 }
 
 .footer-item {
-    margin: 0 10px;
-    margin-bottom: 10px; /* Add space below each footer item */
+    margin-bottom: 10px;
 }
 
 .footer-item a {
@@ -296,4 +299,24 @@ footer {
 
 .footer-item a:hover {
     text-decoration: underline;
+}
+
+.fa {
+    margin-right: 5px;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.floating-text {
+    animation: floating 2s infinite;
 }
